@@ -1,0 +1,9 @@
+body {
+  font-family: Arial;
+}
+
+.cover {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
