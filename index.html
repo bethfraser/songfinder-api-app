@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Frontend JS</title>
+    <title>Track Finder</title>
+    <script src='lyrics.js'></script>
     <script src='index.js'></script>
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
+
     <form>
-      <input type="text" id="track" size="40" placeholder="Search for track">
-      <input type="button" id="add-button" value="Find Tracks">
+      <input type="text" id="track" placeholder="Type a track name"><br>
+      <input type="button" id="add-button" value="Find Tracks by Name">
     </form>
 
+    <form>
+      <input type="text" id="input-lyrics" placeholder="Type some of a track's lyrics"><br>
+      <input type="button" id="add-button-lyrics" value="Find Tracks by Lyrics">
+    </form>
+
+    <div id="chosen"></div>
+    <div class="main">
     <div id="display"></div>
+    </div>
+    <h3 id="alternate">Alternate options:</h3>
+    <div id="lyrics"></div>
   
-    </ul>
   </body>
 </html>

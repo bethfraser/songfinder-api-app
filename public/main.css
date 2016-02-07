@@ -1,10 +1,86 @@
 body {
-  font-family: Arial;
+  font-family: Helvetica;
+  font-size: 20px;
+}
+
+
+form {
+  width: 60%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+input[type=button] {
+  display: inline-block;
+  background-color: rgb(46, 189, 89);
+  margin: 5px auto;
+  padding: 5px 35px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  line-height: 1.5;
+  border: 0;
+  border-radius: 25px;
+}
+
+input[type=button]:hover {
+  background-color: #6cd08a;
+}
+
+input[type=text] {
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.5;
+  padding: 5px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+#chosen {
+  min-height: 1.5em;
+  width: 80%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+#chosen,  #lyrics {
+  font-weight: 200;
+}
+
+p {
+  margin: 0;
+}
+
+#alternate {
+
+}
+
+.main, #alternate, #lyrics {
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+}
+
+#alternate, #lyrics {
+  text-align: center;
 }
 
 .cover {
   width: 150px;
   height: 150px;
-  margin: 10px;
+  margin: 5px;
   display: inline-block;
+  border: 5px solid white;
+}
+
+.cover:hover {
+  border: 5px solid grey;
+}
+
+#alternate {
+  display: none;
 }
