@@ -63,7 +63,7 @@ window.onload = function(){
         }
         else{
           var p = document.createElement('p');
-          p.innerText = track.track.artist_name + ": " + track.track.track_name;
+          p.innerHTML = track.track.artist_name + ": " + track.track.track_name + " " + "<a href='https://www.youtube.com/results?search_query=" + track.track.artist_name + " "+ track.track.track_name +"''>Find on YouTube</a>";
           displayLyrics.appendChild(p);
           alternate.style.display = "block";
         }
