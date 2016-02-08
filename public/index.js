@@ -1,7 +1,5 @@
 window.onload = function(){
 
-
-
   var buttonLyrics = document.getElementById('add-button-lyrics');
   var button = document.getElementById('add-button');
   var display = document.getElementById('display');
@@ -10,7 +8,6 @@ window.onload = function(){
   var displayLyrics = document.getElementById('lyrics');
   var alternate = document.getElementById('alternate');
   var chosen = document.getElementById('chosen');
-
 
   var playAudio = function(audioObject){
     if(audioObject.paused === true || audioObject.ended === true){
@@ -49,10 +46,7 @@ window.onload = function(){
   }
 
   var tracksLoad = function(tracks){
-    console.log("tracks: ", tracks);
     var tracksList = tracks.message.body.track_list;
-    console.log("list of tracks", tracksList);
-
 
     var populateList = function(){
       var list = [];
@@ -85,7 +79,6 @@ window.onload = function(){
   populateList();
 }
 
-
 var lyricsLoad = function(){
 
   var lyricsquery = inputLyrics.value;
@@ -102,16 +95,17 @@ var lyricsLoad = function(){
     response = JSON.parse(lyricsrequest.responseText);
     tracksLoad(response);
   }
-
-
 }
 
-button.onclick = function(){
-
+var resetBoxes = function(){
   display.innerHTML = "";
   displayLyrics.innerHTML = "";
   chosen.innerHTML = "";
   alternate.style.display = "none";
+}
+
+button.onclick = function(){
+  resetBoxes();
 
   var box = document.getElementById('track');
   var query = box.value;
@@ -125,9 +119,7 @@ button.onclick = function(){
       console.log('got the data');
     }
     var data = JSON.parse(request.responseText);
-    console.log(data)
-
-    var tracks = data.tracks.items
+    var tracks = data.tracks.items;
     tracks.sort(function (a, b) {
       return b.popularity - a.popularity;
     })
@@ -139,17 +131,9 @@ button.onclick = function(){
 }
 
 buttonLyrics.onclick = function(){
-  alternate.style.display = "none";
-  display.innerHTML = "";
-  displayLyrics.innerHTML = "";
-  chosen.innerHTML = "";
-  
+  resetBoxes();
   lyricsLoad();
 }
-
-
-
-
 
 };
 
