@@ -10,6 +10,12 @@ app.get('/', function (req, res) {
 
 app.use(express.static('public'));
 
+app.use(function(req,res,next){
+  res.setHeader("Access-Control-Allow-Origin", '*');
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
 // var server = app.listen(5000, function () {
 //   var host = server.address().address;
 //   var port = server.address().port;
