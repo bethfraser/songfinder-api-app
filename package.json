@@ -1,0 +1,24 @@
+{
+  "name": "w9_homework",
+  "version": "1.0.0",
+  "description": "Song finder app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethfraser/weekend_homework_w9.git"
+  },
+  "author": "bethfraser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bethfraser/weekend_homework_w9/issues"
+  },
+  "homepage": "https://github.com/bethfraser/weekend_homework_w9#readme"
+}
