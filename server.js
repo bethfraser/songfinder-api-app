@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 app.use(function(req,res,next){
   res.setHeader("Access-Control-Allow-Origin", '*');
