@@ -11,6 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "engines": {
+      "node": "5.6.0"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bethfraser/weekend_homework_w9.git"
