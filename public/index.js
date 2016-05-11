@@ -82,7 +82,7 @@ window.onload = function(){
 var lyricsLoad = function(){
 
   var lyricsquery = inputLyrics.value;
-  var lyricsurl =   "http://cors.io/?u=https://api.musixmatch.com/ws/1.1/track.search?q_lyrics=" + lyricsquery + "&apikey=e292fdea17eaa5d3e573aa95e90acade&f_has_lyrics&s_track_rating=desc";
+  var lyricsurl =   "https://api.musixmatch.com/ws/1.1/track.search?q_lyrics=" + lyricsquery + "&apikey=e292fdea17eaa5d3e573aa95e90acade&f_has_lyrics&s_track_rating=desc";
   var lyricsrequest = new XMLHttpRequest();
   lyricsrequest.open("GET", lyricsurl);
   lyricsrequest.send(null);
